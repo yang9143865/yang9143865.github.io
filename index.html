@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>生日快乐</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+<div class="container">
+        <h1>🎉 亲爱的姐姐，生日快乐！🎉</h1>
+        
+        <p class="heart">❤️ 庆祝你的21岁 ❤️</p >
+        <p>愿新的一岁：</p >
+        <p>✨ 天天都有小确幸</p >
+        <p>🌸 永远保持少女心</p >
+        <p>🎁 想要的都能实现</p >
+        
+        <div style="margin-top: 30px;">
+            <img src="assets/shsengrikuaile.jpg" alt="生日快乐" width="400" height="300">
+        </div>
+</div>
+<!-- 动态彩带效果 -->
+    <script>
+        function createConfetti() {
+            const confetti = document.createElement('div');
+            confetti.className = 'confetti';
+            confetti.style.left = Math.random() * 100 + 'vw';
+            confetti.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+            confetti.style.animationDuration = Math.random() * 3 + 2 + 's';
+            document.body.appendChild(confetti);
+            setTimeout(() => confetti.remove(), 5000);
+        }
+        setInterval(createConfetti, 200);
+    </script>
+</body>
+</html>
